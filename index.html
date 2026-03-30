@@ -3,83 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimensão C-137 | Redes de Computadores</title>
+    <title>Trabalho de Redes | Dimensão C-137</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="stars"></div>
     <div id="app">
         <header class="header">
             <h1>DIMENSÃO C-137</h1>
-            <p>CONCEITOS DE REDES INTERDIMENSIONAIS</p>
+            <p>GUIA INTERGALÁCTICO DE REDES DE COMPUTADORES</p>
         </header>
 
-        <div class="central-area">
+        <div class="portal-container">
             <div class="portal-core">
-                <i data-lucide="aperture" class="portal-icon"></i>
-            </div>
-            <div class="orbit">
-                <div class="orbit-item" style="--i:1;"><i data-lucide="wifi"></i></div>
-                <div class="orbit-item" style="--i:2;"><i data-lucide="server"></i></div>
-                <div class="orbit-item" style="--i:3;"><i data-lucide="globe"></i></div>
-                <div class="orbit-item" style="--i:4;"><i data-lucide="router"></i></div>
-                <div class="orbit-item" style="--i:5;"><i data-lucide="ethernet"></i></div>
-                <div class="orbit-item" style="--i:6;"><i data-lucide="cpu"></i></div>
+                <i data-lucide="aperture"></i>
             </div>
         </div>
 
-        <main class="info-grid">
-            <section class="info-card">
-                <h2>01. O QUE SÃO REDES?</h2>
-                <p>Dispositivos interligados que trocam dados e recursos via protocolos.</p>
-            </section>
+        <main class="grid-container">
+            <article class="card">
+                <span>01</span>
+                <h2>O que são Redes?</h2>
+                <p>É um sistema de dispositivos interconectados que trocam dados e compartilham recursos (como impressoras ou arquivos) usando protocolos de comunicação.</p>
+            </article>
 
-            <section class="info-card">
-                <h2>02. CLASSIFICAÇÃO</h2>
-                <p>PAN (Pessoal), LAN (Local), MAN (Metropolitana) e WAN (Global/Internet).</p>
-            </section>
+            <article class="card">
+                <span>02</span>
+                <h2>Classificação</h2>
+                <p>As redes são classificadas pela abrangência: <b>PAN</b> (pessoal), <b>LAN</b> (local), <b>MAN</b> (metropolitana) e <b>WAN</b> (global/Internet).</p>
+            </article>
 
-            <section class="info-card">
-                <h2>03. TOPOLOGIAS</h2>
-                <p>Estrela (Centralizada), Barramento, Anel e Malha (Redundante).</p>
-            </section>
+            <article class="card">
+                <span>03</span>
+                <h2>Topologias</h2>
+                <p>Define como os nós se conectam. As principais são: <b>Estrela</b> (ponto central), <b>Barramento</b> (linha única), <b>Anel</b> e <b>Malha</b>.</p>
+            </article>
 
-            <section class="info-card">
-                <h2>04. PADRONIZAÇÃO</h2>
-                <p>Garante a interoperabilidade: dispositivos de marcas diferentes se comunicam.</p>
-            </section>
+            <article class="card">
+                <span>04</span>
+                <h2>Padronização</h2>
+                <p>Essencial para a interoperabilidade. Organizações como ISO e IEEE garantem que aparelhos de marcas diferentes "falem a mesma língua".</p>
+            </article>
 
-            <section class="info-card">
-                <h2>05. MODELOS</h2>
-                <p>OSI (7 camadas - Teórico) e TCP/IP (4 camadas - Prático/Internet).</p>
-            </section>
+            <article class="card">
+                <span>05</span>
+                <h2>Modelos de Referência</h2>
+                <p><b>OSI:</b> 7 camadas teóricas. <br><b>TCP/IP:</b> 4 camadas práticas, a base da Internet moderna.</p>
+            </article>
 
-            <section class="info-card">
-                <h2>06. ORGANIZAÇÕES</h2>
-                <p>ISO, IEEE, IETF e ITU definem as regras globais da tecnologia.</p>
-            </section>
+            <article class="card">
+                <span>06</span>
+                <h2>Organizações</h2>
+                <p>Entidades como <b>IETF</b> (protocolos), <b>IEEE</b> (hardware/wifi) e <b>ITU</b> (telecom) ditam as regras do jogo.</p>
+            </article>
 
-            <section class="info-card">
-                <h2>07. PROTOCOLOS</h2>
-                <p>TCP (Confiável), UDP (Rápido), HTTP (Web) e FTP (Arquivos).</p>
-            </section>
+            <article class="card">
+                <span>07</span>
+                <h2>Protocolos</h2>
+                <p>Regras de comunicação. <b>TCP</b> (garante a entrega), <b>UDP</b> (foca na velocidade), <b>HTTP</b> (páginas web).</p>
+            </article>
 
-            <section class="info-card">
-                <h2>08. ENCAPSULAMENTO</h2>
-                <p>Dados → Segmento → Pacote → Quadro → Bits.</p>
-            </section>
+            <article class="card">
+                <span>08</span>
+                <h2>Encapsulamento</h2>
+                <p>O processo onde os dados ganham "etiquetas" (cabeçalhos) ao descer as camadas: Dados > Segmento > Pacote > Quadro > Bits.</p>
+            </article>
 
-            <section class="info-card">
-                <h2>09. COMANDOS CMD</h2>
-                <p>Ping, Ipconfig, Tracert e Nslookup para diagnóstico.</p>
-            </section>
+            <article class="card">
+                <span>09</span>
+                <h2>Comandos CMD</h2>
+                <p>Ferramentas de diagnóstico: <b>ping</b> (latência), <b>ipconfig</b> (ver IP), <b>tracert</b> (ver rota) e <b>nslookup</b> (DNS).</p>
+            </article>
 
-            <section class="info-card">
-                <h2>10. APLICAÇÕES</h2>
-                <p>WhatsApp, Netflix, Google Drive e Internet das Coisas (IoT).</p>
-            </section>
+            <article class="card">
+                <span>10</span>
+                <h2>Aplicações</h2>
+                <p>Desde o simples e-mail até o complexo <b>Streaming</b> (Netflix), <b>Cloud Computing</b> e a <b>Internet das Coisas (IoT)</b>.</p>
+            </article>
         </main>
     </div>
     <script src="script.js"></script>
