@@ -1,1 +1,3 @@
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+});
