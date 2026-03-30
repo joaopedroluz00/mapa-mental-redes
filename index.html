@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho de Redes | Dimensão C-137</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars"></div>
+    <div class="stars" id="stars-container"></div>
+    
     <div id="app">
         <header class="header">
             <h1>DIMENSÃO C-137</h1>
@@ -21,64 +21,75 @@
             <div class="portal-core">
                 <i data-lucide="aperture"></i>
             </div>
+            <div class="portal-glow"></div>
         </div>
 
         <main class="grid-container">
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="network"></i></div>
                 <span>01</span>
                 <h2>O que são Redes?</h2>
-                <p>É um sistema de dispositivos interconectados que trocam dados e compartilham recursos (como impressoras ou arquivos) usando protocolos de comunicação.</p>
+                <p>É um sistema de dispositivos interconectados que trocam dados e compartilham recursos usando protocolos de comunicação.</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="globe-2"></i></div>
                 <span>02</span>
                 <h2>Classificação</h2>
                 <p>As redes são classificadas pela abrangência: <b>PAN</b> (pessoal), <b>LAN</b> (local), <b>MAN</b> (metropolitana) e <b>WAN</b> (global/Internet).</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="share-2"></i></div>
                 <span>03</span>
                 <h2>Topologias</h2>
                 <p>Define como os nós se conectam. As principais são: <b>Estrela</b> (ponto central), <b>Barramento</b> (linha única), <b>Anel</b> e <b>Malha</b>.</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="shield-check"></i></div>
                 <span>04</span>
                 <h2>Padronização</h2>
                 <p>Essencial para a interoperabilidade. Organizações como ISO e IEEE garantem que aparelhos de marcas diferentes "falem a mesma língua".</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="layers"></i></div>
                 <span>05</span>
                 <h2>Modelos de Referência</h2>
                 <p><b>OSI:</b> 7 camadas teóricas. <br><b>TCP/IP:</b> 4 camadas práticas, a base da Internet moderna.</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="building-2"></i></div>
                 <span>06</span>
                 <h2>Organizações</h2>
                 <p>Entidades como <b>IETF</b> (protocolos), <b>IEEE</b> (hardware/wifi) e <b>ITU</b> (telecom) ditam as regras do jogo.</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="file-code-2"></i></div>
                 <span>07</span>
                 <h2>Protocolos</h2>
                 <p>Regras de comunicação. <b>TCP</b> (garante a entrega), <b>UDP</b> (foca na velocidade), <b>HTTP</b> (páginas web).</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="box"></i></div>
                 <span>08</span>
                 <h2>Encapsulamento</h2>
-                <p>O processo onde os dados ganham "etiquetas" (cabeçalhos) ao descer as camadas: Dados > Segmento > Pacote > Quadro > Bits.</p>
+                <p>O processo onde os dados ganham "etiquetas" ao descer as camadas: Dados > Segmento > Pacote > Quadro > Bits.</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="terminal"></i></div>
                 <span>09</span>
                 <h2>Comandos CMD</h2>
                 <p>Ferramentas de diagnóstico: <b>ping</b> (latência), <b>ipconfig</b> (ver IP), <b>tracert</b> (ver rota) e <b>nslookup</b> (DNS).</p>
             </article>
 
-            <article class="card">
+            <article class="card hidden">
+                <div class="card-icon"><i data-lucide="smartphone"></i></div>
                 <span>10</span>
                 <h2>Aplicações</h2>
                 <p>Desde o simples e-mail até o complexo <b>Streaming</b> (Netflix), <b>Cloud Computing</b> e a <b>Internet das Coisas (IoT)</b>.</p>

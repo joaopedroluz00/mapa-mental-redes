@@ -2,62 +2,196 @@
     --green: #3fff3f;
     --blue: #00e5ff;
     --dark: #050a0e;
+    --card-bg: rgba(10, 15, 25, 0.65);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--dark);
     color: white;
     font-family: 'Inter', sans-serif;
-    margin: 0;
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
-.header { text-align: center; padding: 50px 20px; }
-.header h1 { font-family: 'Press Start 2P', cursive; color: var(--green); text-shadow: 0 0 20px var(--green); font-size: 2rem; }
-.header p { color: var(--blue); font-size: 0.8rem; letter-spacing: 2px; margin-top: 15px; }
+/* Fundo Estrelado */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
 
-/* Portal Centralizado Corretamente */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 5px white; }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Cabeçalho */
+.header { 
+    text-align: center; 
+    padding: 60px 20px 30px; 
+}
+
+.header h1 { 
+    font-family: 'Press Start 2P', system-ui; 
+    color: var(--green); 
+    text-shadow: 0 0 15px rgba(63, 255, 63, 0.6); 
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    line-height: 1.4;
+}
+
+.header p { 
+    color: var(--blue); 
+    font-size: 0.9rem; 
+    letter-spacing: 3px; 
+    margin-top: 20px; 
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Portal Animado */
 .portal-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .portal-core {
-    width: 80px; height: 80px;
+    width: 90px; 
+    height: 90px;
     border-radius: 50%;
     background: var(--green);
-    box-shadow: 0 0 40px var(--green);
-    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 40px var(--green), inset 0 0 20px #000;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     animation: pulse 2s infinite alternate;
+    z-index: 2;
+    border: 3px solid #fff;
 }
 
-.portal-core i { width: 50px; height: 50px; color: black; animation: rotate 5s linear infinite; }
+.portal-glow {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(63,255,63,0.4) 0%, rgba(0,0,0,0) 70%);
+    animation: spin-glow 4s linear infinite;
+    z-index: 1;
+}
+
+.portal-core i { 
+    width: 45px; 
+    height: 45px; 
+    color: var(--dark); 
+    animation: rotate 5s linear infinite; 
+}
 
 @keyframes rotate { 100% { transform: rotate(360deg); } }
-@keyframes pulse { from { transform: scale(1); } to { transform: scale(1.1); } }
+@keyframes spin-glow { 100% { transform: rotate(360deg) scale(1.1); } }
+@keyframes pulse { 
+    0% { transform: scale(0.95); box-shadow: 0 0 30px var(--green); } 
+    100% { transform: scale(1.05); box-shadow: 0 0 60px var(--green); } 
+}
 
 /* Grid de Cards */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto 100px auto;
     padding: 0 20px;
 }
 
 .card {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid var(--green);
-    border-radius: 15px;
-    padding: 30px;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(63, 255, 63, 0.2);
+    border-radius: 16px;
+    padding: 35px 30px;
     position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(0, 229, 255, 0.3);
     transition: 0.3s;
 }
 
-.card:hover { border-color: var(--blue); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2); }
+.card:hover { 
+    border-color: var(--blue); 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(0, 229, 255, 0.15); 
+    background: rgba(15, 25, 40, 0.85);
+}
 
-.card span { color: var(--blue); font-weight: bold; font-size: 1.2rem; display: block; margin-bottom: 10px; }
-.card h2 { color: var(--green); margin-bottom: 15px; font-size: 1.4rem; font-weight: 800; }
-.card p { color: #cbd5e1; line-height: 1.6; }
+.card:hover .card-icon {
+    color: var(--blue);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card span { 
+    color: var(--blue); 
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 0.8rem; 
+    display: block; 
+    margin-bottom: 15px; 
+    opacity: 0.8;
+}
+
+.card h2 { 
+    color: var(--green); 
+    margin-bottom: 15px; 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    letter-spacing: -0.5px;
+}
+
+.card p { 
+    color: #94a3b8; 
+    line-height: 1.7; 
+    font-size: 0.95rem;
+}
+
+.card b {
+    color: #e2e8f0;
+}
+
+/* Animação de entrada dos cards (Scroll Reveal) */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
