@@ -3,40 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Mental - Redes de Computadores</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Redes de Computadores</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🌐 Redes de Computadores</h1>
-            <p>Mapa Mental Interativo dos Conceitos Fundamentais</p>
-        </div>
-
-        <div class="section">
-            <div class="section-title">
-                <div class="section-number" style="background: #3b82f6;">1</div>
-                <span>Conceito de Redes</span>
+<body class="h-full">
+    <div id="app">
+        <div class="container">
+            <div class="header">
+                <h1>🌐 Redes de Computadores</h1>
+                <p>Entenda os conceitos fundamentais de redes</p>
             </div>
-            <div class="content-grid">
-                <div class="item">
-                    <strong>O que é?</strong>
-                    <p>Dispositivos interligados trocando dados via protocolos.</p>
-                </div>
-                <div class="item">
-                    <strong>Elementos</strong>
-                    <ul>
-                        <li>Hosts (PC, Celular)</li>
-                        <li>Enlaces (Cabos, Wi-Fi)</li>
-                        <li>Protocolos (Regras)</li>
-                    </ul>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #3b82f6;">1</div><span>Conceito de Redes</span></div>
+                <div class="content-grid">
+                    <div class="item" style="border-color: #3b82f6;"><strong>O que é?</strong><p>Conjunto de dispositivos interligados que trocam dados via protocolos.</p></div>
+                    <div class="item" style="border-color: #3b82f6;"><strong>Elementos</strong><ul><li>Hosts</li><li>Enlaces</li><li>Protocolos</li></ul></div>
                 </div>
             </div>
-        </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #10b981;">2</div><span>Tipos e Classificação</span></div>
+                <div class="content-grid">
+                    <div class="item" style="border-color: #10b981;"><strong>📏 PAN</strong><p>Pessoal (Bluetooth)</p></div>
+                    <div class="item" style="border-color: #10b981;"><strong>🏢 LAN</strong><p>Local (Casa/Empresa)</p></div>
+                    <div class="item" style="border-color: #10b981;"><strong>🏙️ MAN</strong><p>Cidade</p></div>
+                    <div class="item" style="border-color: #10b981;"><strong>🌍 WAN</strong><p>Global (Internet)</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #f59e0b;">3</div><span>Topologias</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>Estrela</strong><p>Centralizada (Mais comum)</p></div>
+                    <div class="item"><strong>Malha</strong><p>Alta confiabilidade</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #ef4444;">4</div><span>Padronização</span></div>
+                <div class="item"><strong>Importância:</strong><p>Garante que sistemas diferentes se comuniquem (Interoperabilidade).</p></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #8b5cf6;">5</div><span>Modelos OSI e TCP/IP</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>OSI</strong><p>7 camadas (Teórico)</p></div>
+                    <div class="item"><strong>TCP/IP</strong><p>4 camadas (Prático/Internet)</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #ec4899;">6</div><span>Organizações</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>ISO / IEEE</strong><p>Definem os padrões globais.</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #06b6d4;">7</div><span>Protocolos</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>TCP</strong><p>Confiável</p></div>
+                    <div class="item"><strong>UDP</strong><p>Rápido</p></div>
+                    <div class="item"><strong>HTTP</strong><p>Web</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #14b8a6;">8</div><span>Encapsulamento</span></div>
+                <div class="highlight"><strong>Fluxo:</strong><p>Dados -> Segmento -> Pacote -> Quadro -> Bits</p></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #a855f7;">9</div><span>Comandos</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>ping / ipconfig</strong><p>Testes de rede</p></div>
+                    <div class="item"><strong>tracert</strong><p>Caminho dos dados</p></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-number" style="background: #d946ef;">10</div><span>Aplicações</span></div>
+                <div class="content-grid">
+                    <div class="item"><strong>Streaming / IoT</strong><p>Netflix, WhatsApp, Casas Inteligentes</p></div>
+                </div>
+            </div>
 
         </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
